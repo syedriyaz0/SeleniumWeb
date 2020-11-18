@@ -1,13 +1,9 @@
 package com.test;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import com.objectRepository.BootStrapObjects;
+import com.pageObjectFactory.PageObjectFactoryBootStrap;
 import com.util.Utilities;
 
 import resources.Base;
@@ -20,26 +16,24 @@ public class TestBootStrapDropDown extends Base {
 	@Test
 	public void bootStrapDropDown() throws Exception {
 		
-		
+		PageObjectFactoryBootStrap pbs = new PageObjectFactoryBootStrap(driver);
 		Utilities util = new Utilities(driver);
-		WebElement clickBtn=driver.findElement(By.xpath("//button[@id='bootstrapmenu']"));
-		util.getScrollToXpathElement(clickBtn, "Boot strap button");
-		clickBtn.click();
 		
+		util.getScrollToXpathElement(pbs.clickBtn, "Boot strap button");
+		pbs.clickBtn.click();
+		util.getExplicitWaitTime(pbs.clickBtn, 10);
 		
-		List<WebElement> dropDownList=driver.findElements(By.xpath("//ul[@class='dropdown-menu']//li"));
-		
-		for(WebElement ele : dropDownList) {
+		for(WebElement ele : pbs.dropDownList) {
+			Thread.sleep(2000);
 			String listName=ele.getText();
 			System.out.println(listName);
-			
-			if (listName.equalsIgnoreCase("contact us")) {
+			if (listName.equalsIgnoreCase("Contact us")) {
 				ele.click();
 				break;
 			}
 		}
-		WebElement contactUs= driver.findElement(By.xpath("//h3[contains(text(),'CONTACT US')]"));
-		util.getScrollToXpathElement( contactUs, "Contact us");
+		
+		util.getScrollToXpathElement(pbs.contactUs, "Contact us");
 		driver.navigate().back();
 	}
 	

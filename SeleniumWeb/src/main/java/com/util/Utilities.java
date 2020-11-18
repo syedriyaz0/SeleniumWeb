@@ -27,9 +27,9 @@ public class Utilities {
 	}
 	
 	
-	public void getExplicitWaitTime(WebElement locator, int seconds) throws Exception {
+	public void getExplicitWaitTime(WebElement element, int seconds) throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy((By) locator));
+		wait.until(ExpectedConditions.visibilityOf(element));
 		
 	}
 	
@@ -38,10 +38,13 @@ public class Utilities {
 		jse.executeScript("window.scroll("+horizontal+","+vertical+"");
 	}
 	
-	public void getScrollToXpathElement(WebElement locator, String eleName) throws Exception {
-			JavascriptExecutor jse = (JavascriptExecutor) driver;
-			jse.executeScript("arguments[0].scrollIntoView(true)",locator);
-		} 
+	public void getScrollToXpathElement(WebElement element, String eleName) throws Exception {
+			
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].scrollIntoView(true)",element);
+				
+	} 
+		
 		
 	
 	

@@ -63,7 +63,7 @@ public class ActionsClass  {
 	}
 	
 	
-	//@Test
+	//@Test(groups={"ChromeBrowserSpeedTest"})
 	public void actionClass() {
 		
 		WebElement search=driver.findElement(By.name("q"));
