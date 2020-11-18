@@ -3,7 +3,6 @@ package com.test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,25 +18,46 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class ActionsClass  {
 	
 	public WebDriver driver;
+	public String url = "http://www.google.com";
 	
 	@BeforeClass
-	public void setup() {
+	public void setup( ) {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://www.google.com");
+		driver.get(url);
 	}
 	
 	
-	@Test
-	public void searchWithAction() {
+	
+	@Test(priority=1, groups= {"Action"})
+	public void searchWithKeyboardAction( ) throws InterruptedException {
+		
 		//creating actions class object
 		Actions action = new Actions(driver);
 		WebElement search=driver.findElement(By.name("q"));
-		action.keyDown(search,Keys.SHIFT).sendKeys("selenium").build().perform();
+		action.keyDown(search,Keys.SHIFT)
+				.sendKeys("selenium")
+				.keyUp(search, Keys.SHIFT)
+				.keyDown(search, Keys.CONTROL).sendKeys("x")
+				.keyDown(search, Keys.CONTROL).sendKeys("v")
+				.build()
+				.perform();
+		
+		Thread.sleep(4000);
+		driver.close();
+		
+	}
+	
+	
+	@Test(priority=2)
+	public void mouseActions() {
+		//creating actions class object
+		Actions action = new Actions(driver);
+		
 		
 		
 	}
