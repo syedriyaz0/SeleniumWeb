@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.AutoSuggestions">
+      <class name="com.test.AlertsHandling">
         <methods>
-          <include name="autoSuggestionList"/>
           <include name="setup"/>
+          <include name="promptAlert"/>
         </methods>
-      </class> <!-- com.test.AutoSuggestions -->
+      </class> <!-- com.test.AlertsHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
