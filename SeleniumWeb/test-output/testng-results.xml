@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-19T20:04:49 IST" name="Default suite" finished-at="2020-11-19T20:05:02 IST" duration-ms="13512">
+  <suite started-at="2020-11-20T13:14:16 IST" name="Default suite" finished-at="2020-11-20T13:14:40 IST" duration-ms="24098">
     <groups>
     </groups>
-    <test started-at="2020-11-19T20:04:49 IST" name="Default test" finished-at="2020-11-19T20:05:02 IST" duration-ms="13512">
-      <class name="com.test.SelectClass">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.SelectClass@159f197]" started-at="2020-11-19T20:04:49 IST" name="setup" finished-at="2020-11-19T20:04:56 IST" duration-ms="6665" status="PASS">
+    <test started-at="2020-11-20T13:14:16 IST" name="Default test" finished-at="2020-11-20T13:14:40 IST" duration-ms="24098">
+      <class name="com.test.AutoSuggestions">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.AutoSuggestions@51e5fc98]" started-at="2020-11-20T13:14:16 IST" name="setup" finished-at="2020-11-20T13:14:22 IST" duration-ms="6530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="selectFromList()[pri:0, instance:com.test.SelectClass@159f197]" started-at="2020-11-19T20:04:56 IST" name="selectFromList" finished-at="2020-11-19T20:05:02 IST" duration-ms="6803" status="PASS">
+        <test-method signature="autoSuggestionList()[pri:0, instance:com.test.AutoSuggestions@51e5fc98]" started-at="2020-11-20T13:14:22 IST" name="autoSuggestionList" finished-at="2020-11-20T13:14:40 IST" duration-ms="17523" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectFromList -->
-      </class> <!-- com.test.SelectClass -->
+        </test-method> <!-- autoSuggestionList -->
+      </class> <!-- com.test.AutoSuggestions -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
