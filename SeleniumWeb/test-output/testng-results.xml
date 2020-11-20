@@ -2,39 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-18T21:06:21 IST" name="Default suite" finished-at="2020-11-18T21:06:45 IST" duration-ms="23118">
+  <suite started-at="2020-11-19T20:04:49 IST" name="Default suite" finished-at="2020-11-19T20:05:02 IST" duration-ms="13512">
     <groups>
     </groups>
-    <test started-at="2020-11-18T21:06:21 IST" name="Default test" finished-at="2020-11-18T21:06:45 IST" duration-ms="23118">
-      <class name="com.test.TestBootStrapDropDown">
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.test.TestBootStrapDropDown@1677d1]" started-at="2020-11-18T21:06:21 IST" name="generateReport" finished-at="2020-11-18T21:06:22 IST" duration-ms="352" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateReport -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.TestBootStrapDropDown@1677d1]" started-at="2020-11-18T21:06:22 IST" name="setup" finished-at="2020-11-18T21:06:29 IST" duration-ms="7454" status="PASS">
+    <test started-at="2020-11-19T20:04:49 IST" name="Default test" finished-at="2020-11-19T20:05:02 IST" duration-ms="13512">
+      <class name="com.test.SelectClass">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.test.SelectClass@159f197]" started-at="2020-11-19T20:04:49 IST" name="setup" finished-at="2020-11-19T20:04:56 IST" duration-ms="6665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="methodName(java.lang.reflect.Method)[pri:0, instance:com.test.TestBootStrapDropDown@1677d1]" started-at="2020-11-18T21:06:29 IST" name="methodName" finished-at="2020-11-18T21:06:29 IST" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.test.TestBootStrapDropDown.bootStrapDropDown() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="selectFromList()[pri:0, instance:com.test.SelectClass@159f197]" started-at="2020-11-19T20:04:56 IST" name="selectFromList" finished-at="2020-11-19T20:05:02 IST" duration-ms="6803" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- methodName -->
-        <test-method signature="bootStrapDropDown()[pri:0, instance:com.test.TestBootStrapDropDown@1677d1]" started-at="2020-11-18T21:06:29 IST" name="bootStrapDropDown" finished-at="2020-11-18T21:06:43 IST" duration-ms="13267" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bootStrapDropDown -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.test.TestBootStrapDropDown@1677d1]" started-at="2020-11-18T21:06:43 IST" name="afterClass" finished-at="2020-11-18T21:06:45 IST" duration-ms="1995" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.test.TestBootStrapDropDown -->
+        </test-method> <!-- selectFromList -->
+      </class> <!-- com.test.SelectClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

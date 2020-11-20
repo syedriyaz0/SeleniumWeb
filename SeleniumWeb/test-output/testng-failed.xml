@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.TestBootStrapDropDown">
+      <class name="com.test.SelectClass">
         <methods>
-          <include name="afterClass"/>
-          <include name="methodName"/>
+          <include name="selectFromList"/>
           <include name="setup"/>
-          <include name="bootStrapDropDown"/>
-          <include name="generateReport"/>
         </methods>
-      </class> <!-- com.test.TestBootStrapDropDown -->
+      </class> <!-- com.test.SelectClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SelectClass {
+public class SelectUsingActions {
 
 	
 public WebDriver driver;
